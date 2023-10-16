@@ -9,12 +9,7 @@ const ProductPage = () => {
   // const [products, setProducts] = useState([]);
   const { push } = useRouter();
 
-  useEffect(() => {
-    if (!isLogin) {
-      push("/auth/login");
-    }
-  }, []);
-
+  
   const { data, error, isLoading } = useSWR("/api/product", fetcher);
 
   // useEffect(() => {
