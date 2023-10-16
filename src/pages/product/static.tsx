@@ -22,5 +22,7 @@ export async function getStaticProps() {
     props: {
       products: response.data,
     },
+    //Incremental Static Regeneration
+    // revalidate: 10,
   };
 }
